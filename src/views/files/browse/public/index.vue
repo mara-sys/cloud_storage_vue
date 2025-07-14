@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  登陆界面
+  公共存储空间
 </template>
 
 <style scoped>

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  登陆界面
+  日志管理
 </template>
 
 <style scoped>
