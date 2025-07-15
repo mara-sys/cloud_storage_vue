@@ -28,4 +28,21 @@ const router = createRouter({
   ]
 })
 
+// 全局路由守卫
+router.beforeEach((to, from, next) => {
+  const loginInfo = localStorage.getItem('loginInfo')
+  
+  // 放行登录页
+  if (to.path === '/login') {
+    next()
+  } else {
+    // 其他页面必须登录后才能访问
+    if (loginInfo) {
+      next()
+    } else {
+      next('/login') // 未登录，跳转登录页
+    }
+  }
+})
+
 export default router
