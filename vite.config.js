@@ -11,6 +11,14 @@ export default defineConfig({
     vueDevTools(),
   ],
   server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8080',
+        secure: false,
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      }
+    },
     port: 5174 // 修改端口为 5174
   },
   resolve: {
