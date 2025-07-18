@@ -82,12 +82,9 @@ const logout = () => {
                 <template #title>
                   <el-icon><Management /></el-icon>用户管理
                 </template>
-                  <router-link to="">
-
-                  </router-link>
-                  <el-menu-item index="4-1"><el-icon><UserFilled /></el-icon>用户列表</el-menu-item>
-                  <el-menu-item index="4-2"><el-icon><CirclePlus /></el-icon>添加用户</el-menu-item>
-                  <el-menu-item index="4-2"><el-icon><Lock /></el-icon>密码管理</el-menu-item>
+                  <el-menu-item index="/users/manage/list"><el-icon><UserFilled /></el-icon>用户列表</el-menu-item>
+                  <el-menu-item index="/users/manage/add"><el-icon><CirclePlus /></el-icon>添加用户</el-menu-item>
+                  <el-menu-item index="/users/manage/update"><el-icon><Lock /></el-icon>密码管理</el-menu-item>
               </el-sub-menu>
 
               <el-sub-menu index="5">

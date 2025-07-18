@@ -7,6 +7,7 @@ import homeView from '@/views/home/index.vue'
 import filesBrowsePublicView from '@/views/files/browse/public/index.vue'
 import filesBrowsePrivateView from '@/views/files/browse/private/index.vue'
 import contactsView from '@/views/contacts/index.vue'
+import usersListView from '@/views/users/manage/index.vue'
 
 
 const router = createRouter({
@@ -22,6 +23,7 @@ const router = createRouter({
         { path: 'files/browse/public', name: 'publicFileList', component: filesBrowsePublicView },
         { path: 'files/browse/private', name: 'privateFileList', component: filesBrowsePrivateView },
         { path: 'contacts', name: 'contactsList', component: contactsView },
+        { path: 'users/manage/list', name: 'usersList', component: usersListView },
       ]
     },
     { path: '/login', name: 'login', component: loginView },
